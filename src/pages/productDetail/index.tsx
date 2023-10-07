@@ -35,7 +35,10 @@ export default function ProductDetailPage() {
 
   return (
     <Layout>
-      <div className="row m-0 p-0 px-5" style={{background: '#f7f7f7'}}>
+      <button className="w-25 border border-dark py-2 mt-4 ms-2">
+        cart item
+      </button>
+      <div className="row m-0 p-0 px-5" style={{ background: "#f7f7f7" }}>
         {modal ? (
           <ProductDetailCard
             image={modal.image}
@@ -45,8 +48,11 @@ export default function ProductDetailPage() {
             rating={modal.rating}
           />
         ) : (
-          <div className="col-12 d-flex flex-column justify-content-center align-items-center" style={{height:'65vh'}}>
-            <img src={LoadingGIF} style={{width:"15vw", height:"25vh"}}/>
+          <div
+            className="col-12 d-flex flex-column justify-content-center align-items-center"
+            style={{ height: "65vh" }}
+          >
+            <img src={LoadingGIF} style={{ width: "15vw", height: "25vh" }} />
           </div>
         )}
       </div>
